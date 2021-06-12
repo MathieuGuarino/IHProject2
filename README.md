@@ -30,30 +30,22 @@ Who is consumming the most over the wolrd ?
 <a name="dataset"></a>
 
 ## Dataset
-There is two data sources :
-The Global Health Organisation API
+The dataset come from :
+[Compiled datasets for CDP Analytics Competition](https://www.kaggle.com/seraphimstreets/environmentequity-starterpack)
 
-Kaggle CSV files Dataset :
-
-
-I accessed Kaggle by creating a account on the website to download the files. The GHO is open and I read the documentation of the GHO OData API.
-
-I cleaned the data with pandas then uploaded it with mysql.connector on SQL Cloud. I then accessed merged data with mysql.connector and SQL Queries
-
-[Dataset](https://www.kaggle.com/imdevskp/malaria-dataset) 
-[GHO API](https://www.who.int/data/gho/info/gho-odata-api)
+There is a lot of files so I needed to check first which file could be interesting, clean it up then merge it with other data
 
 <a name="workflow"></a>
 
 ## Workflow
-The first difficulty was to find data which can be linked on the topic of Health.
-I found the GHO API which has data on doctors by country. The only problem was that the country information was using short names so I had to get the country full name with another request then clean the data.
-The dataset has malaria information by country.
-My first step was to get these data and clean them into dataframes ready to be transfered into two SQL tables.
-My second step was to learn how tu use cloud SQL with python and I followed a tutorial and some documentation after creating a test account on Google.
-The third step was to cast the data into the right format and create the SQL tables. I had problems with numpy datatype.
-The last steps was getting merged data from the two tables into python dataframe then do some stats to show if the number of sick people is only linked with the number of doctors.
-
+The first difficulty was to choose a direction and to filter the non necessary data. Indeed there is a huge number of file for a short period of time.
+Even with a few files that was a lot of data in the columns so I needed to filter.
+The dataset selected are : Fossil Fuel Prices (1989-2019), Percentage of Energy Consumption by Country, CO2 emissions by country, Pollution emissions by region, Deaths by Particulate Matter Air Pollution vs PM25 by country, Green Growth Indicators by country.
+My first step was to host the datasets on google drive.
+The second step was to merge and clean 4 of these datasets. The other 2 are used as secondary information.
+The third step was to analyze data with correlation, plots, heatmap, histograms
+The fourth step was to use PCA to compare countries
+Then we 
 <a name="organization"></a>
 
 ## Organization
@@ -64,6 +56,17 @@ How did you organize yourself? Did you use any tools?
 ## Links
 Include the links to your repository, slides and trello. Feel free to include any other links associated to your project. 
 
-[Repository](https://github.com/screamzz/DataSets-SQL-API/)  
-[Trello](https://trello.com/b/9HULHhAJ/iron-hack)  
+[Repository](https://github.com/screamzz/IHProject2/)   
+[Slides](https://docs.google.com/presentation/d/1DR6nLEWwSqqzdO_rTZZ4NDeUlRWxGYmABaZnsvkvd6Q/edit?usp=sharing)
 
+# Conclusion
+
+We can see that the energy consumption and production is changing over the years.
+Some countries have a defined pattern with energy and look alike with some others.
+There is clearly a link between PM25 and deaths by pollution.
+
+# Going further
+
+I spent a lot of time selecting data, and it's still not enough to dig through it.
+The other files are also interesting to see if we can link more data and discover new patterns.
+For speed I cleaned and removed a lot of data from some datasets because I needed to bind data from the same year, but the removed data is still interesting, for example I saw two falls in CO2 and production around 1914-1918 and 1939-1945 which are probably linked with the two wold wars.
