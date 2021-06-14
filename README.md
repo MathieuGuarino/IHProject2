@@ -54,7 +54,6 @@ How did you organize yourself? Did you use any tools?
 <a name="links"></a>
 
 ## Links
-Include the links to your repository, slides and trello. Feel free to include any other links associated to your project. 
 
 [Repository](https://github.com/screamzz/IHProject2/)   
 [Slides](https://docs.google.com/presentation/d/1DR6nLEWwSqqzdO_rTZZ4NDeUlRWxGYmABaZnsvkvd6Q/edit?usp=sharing)
